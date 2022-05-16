@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - dev
-      - trunk
+      - main
     paths-ignore: 
       - README.md
       - .devcontainer/**
@@ -35,7 +35,7 @@ jobs:
         path: app/
   container:
     needs: artifact
-    if: github.ref == 'refs/heads/trunk'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:    
     - uses: actions/checkout@v2
