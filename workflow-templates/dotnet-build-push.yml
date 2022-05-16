@@ -34,7 +34,7 @@ jobs:
         path: app/
   container:
     needs: artifact
-    if: github.ref == "refs/heads/${protected-branches}"
+    if: github.ref == "refs/heads/trunk"
     runs-on: ubuntu-latest
     steps:    
     - uses: actions/checkout@v2
