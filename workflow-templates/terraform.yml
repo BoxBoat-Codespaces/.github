@@ -71,6 +71,6 @@ jobs:
         terraform apply -input=false tfplan
 
     - name: Cleanup
-      uses: snippets-n-memes/delete-artifact@v1
+      uses: boxboat-codespaces/delete-artifact@v1
       with:
         name: tfplan
